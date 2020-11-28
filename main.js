@@ -4,7 +4,7 @@ var mouseEvent = "empty";
 canvas = document.getElementById("myCanvas");
 ctx = canvas.getContext("2d");
 
-var color = "black";
+var color = document.getElementById("color").value;
 var width_of_line = "2";
 canvas.addEventListener("mousedown", mymousedown);
 function mymousedown(e) {
@@ -38,3 +38,7 @@ canvas.addEventListener("mouseleave", mymouseleave);
 function mymouseleave(e) {
     mouseEvent = "mouseLeave";
 }
+function clearCanvas() {
+    ctx.clearRect(0,0,canvas.width, canvas.height);
+}
+
